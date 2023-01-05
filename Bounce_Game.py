@@ -93,7 +93,7 @@ class BallTest:
         startx = [200,100,150,50,250,300,350,400,450]
         starty = [200,100,150,50,250,300,350,400,450]
         self.canvas.move(self.id,random.choice(startx),random.choice(starty))
-        start = [-3,-2,1,-1,2,3]
+        start = [-4,-3,-2,1,-1,2,3,4]
         self.x = random.choice(start)
         self.y = random.choice(start)
     
@@ -384,6 +384,14 @@ def intro():
     tk.resizable(0,0)
     tk.wm_attributes("-topmost",1) # in front of all the window
     canvas = Canvas(tk,width=500,height=500, bd=0 , highlightbackground='white')
+    screen_width = tk.winfo_screenwidth()
+    screen_height = tk.winfo_screenheight()
+
+    x = int((screen_width / 2) - (500 / 2))
+    y = int((screen_height / 2) - (500 / 2))
+
+    tk.geometry(f"{500}x{555}+{x}+{y}")
+
     canvas.pack()
     canvas.create_text(250,100,text="Welcome to the Bounce Game!",font=("Comic Sans MS",20), fill = "Black")
     canvas.create_text(250,130,text="Bem vindo ao Bounce Game!",font=("Comic Sans MS",20), fill = "Black")
