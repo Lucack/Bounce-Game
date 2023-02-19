@@ -1,7 +1,7 @@
 from tkinter import *
 import random
 import time
-from playsound import playsound
+# from playsound import playsound
 
 class Ball:
 
